@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GamePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GameView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/console/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/sixquiprend/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +76,18 @@
       <updated>1684923332411</updated>
       <workItem from="1684923333717" duration="4000" />
     </task>
+    <task id="LOCAL-00001" summary="architecture des classe">
+      <created>1684953353503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684953353503</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="architecture des classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="architecture des classe" />
   </component>
 </project>
