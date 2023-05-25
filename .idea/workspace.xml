@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/console/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +80,19 @@
       <option name="project" value="LOCAL" />
       <updated>1684953353503</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="création constructeur dans classe">
+      <created>1684955816869</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684955816869</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="architecture des classe" />
-    <option name="LAST_COMMIT_MESSAGE" value="architecture des classe" />
+    <MESSAGE value="création constructeur dans classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="création constructeur dans classe" />
   </component>
 </project>
