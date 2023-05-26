@@ -7,6 +7,8 @@ public class Board {
     List<Card> cardsonboard;
 
     public Board(){
+
+
         this.cardsonboard= new ArrayList<>();
     }
 }
