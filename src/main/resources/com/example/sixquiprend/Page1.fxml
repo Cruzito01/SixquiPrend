@@ -28,7 +28,7 @@
             <Font name="Arial Black" size="80.0" />
          </font>
       </Text>
-      <Button alignment="CENTER" layoutX="882.0" layoutY="863.0" mnemonicParsing="false" text="Play">
+      <Button fx:id="Play" alignment="CENTER" layoutX="882.0" layoutY="863.0" mnemonicParsing="false" onAction="#onPlayButtonClick" text="Play">
          <font>
             <Font size="50.0" />
          </font>
