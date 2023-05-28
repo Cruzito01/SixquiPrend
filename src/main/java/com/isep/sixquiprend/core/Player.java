@@ -11,10 +11,20 @@ public class Player {
     }
 
     public Hand getHand() {
+
         return hand;
     }
 
     public void setHand(Hand hand) {
+
         this.hand = hand;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
