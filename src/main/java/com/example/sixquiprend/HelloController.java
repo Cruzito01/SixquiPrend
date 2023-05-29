@@ -1,14 +1,37 @@
 package com.example.sixquiprend;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
-
+    private Button btnPlay;
     @FXML
-    protected void onPlayButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Button BackButton;
+    @FXML
+    private void onPlayButtonClick(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+
+        if(event.getSource()==btnPlay){
+            stage=(Stage) btnPlay.getScene().getWindow();
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PageInscription.fxml")));
+        }
+        else{
+            stage=(Stage) BackButton.getScene().getWindow();
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Page1.fxml")));
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
+
 }
