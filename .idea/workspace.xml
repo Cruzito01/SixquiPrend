@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="création des carte">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2023_14_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2023_14_47__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/Page1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/Page1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/other/fond6QuiPrend.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/other/fondVert.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/fondVert.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/alex-/IdeaProjects/SixquiPrend/src/main/resources/com/example/sixquiprend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -88,7 +85,8 @@
       <workItem from="1684923333717" duration="4000" />
       <workItem from="1685104295446" duration="16000" />
       <workItem from="1685362194387" duration="64000" />
-      <workItem from="1685362857019" duration="6288000" />
+      <workItem from="1685362857019" duration="6377000" />
+      <workItem from="1685387747228" duration="1676000" />
     </task>
     <task id="LOCAL-00001" summary="architecture des classe">
       <created>1684953353503</created>
@@ -104,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684955816869</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="création des carte">
+      <created>1685369228278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685369228278</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
