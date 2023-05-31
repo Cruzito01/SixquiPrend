@@ -30,8 +30,8 @@
                      </font>
                   </Label>
                   <TextField fx:id="nameInput" layoutX="173.0" layoutY="120.0" prefHeight="25.0" prefWidth="240.0" />
-                  <Button fx:id="ButtonAddPlayer" layoutX="216.0" layoutY="176.0" mnemonicParsing="false" text="Add" />
-                  <Button fx:id="LetsPlay" layoutX="305.0" layoutY="465.0" mnemonicParsing="false" text="Let's Play">
+                  <Button fx:id="ButtonAddPlayer" layoutX="216.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleAddPlayerButton" text="Add" />
+                  <Button fx:id="buttonGoToBoard" layoutX="305.0" layoutY="465.0" onAction="#handleGoToBoardButton" mnemonicParsing="false" text="Let's Play">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -41,7 +41,12 @@
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="RemoveButton" layoutX="295.0" layoutY="176.0" mnemonicParsing="false" text="Remove" />
+                  <Button fx:id="buttonRemoveLastPlayer" layoutX="295.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleRemoveLastPlayerButton" text="Remove" />
+                  <Label fx:id="errorLabel" layoutX="25.0" layoutY="249.0" prefHeight="27.0" prefWidth="420.0" text="You must be between 1 and 10 players to be able to start à game" textFill="#ff0606" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </items>

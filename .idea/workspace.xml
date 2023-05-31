@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="création des carte">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="86067081-5961-4bd0-992b-7bb0db86d7ea" />
+        <option name="url" value="https://github.com/Cruzito01/SixquiPrend.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
