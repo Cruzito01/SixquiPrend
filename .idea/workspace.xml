@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="création des carte">
+    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="Page inscription faite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685389709582</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Page inscription faite">
+      <created>1685556867221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685556867221</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +144,8 @@
     <MESSAGE value="architecture des classe" />
     <MESSAGE value="création constructeur dans classe" />
     <MESSAGE value="création des carte" />
-    <option name="LAST_COMMIT_MESSAGE" value="création des carte" />
+    <MESSAGE value="Page inscription faite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page inscription faite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
