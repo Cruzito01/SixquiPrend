@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="création des carte">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Ai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2023_14_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_05_2023_14_47__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GamePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
