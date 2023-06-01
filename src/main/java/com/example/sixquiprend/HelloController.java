@@ -1,5 +1,6 @@
 package com.example.sixquiprend;
 
+import com.example.sixquiprend.view.GamePresenter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
