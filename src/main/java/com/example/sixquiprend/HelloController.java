@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -132,10 +133,16 @@ public class HelloController {
 
     @FXML
     public void handleContinueButton(ActionEvent event) throws IOException {
-
-        int numPlayers = players.size();
-        Namelabel.setText(String.valueOf(numPlayers));
+        ArrayList<String> Allplayers = new ArrayList<>();
+        Allplayers.add(0, "Alexandre");
+        Allplayers.add(1, "Sherine");
+        Allplayers.add(2, "Martin");
+        Namelabel.setText(Allplayers.get(0));
     }
+
+
+
+
     @FXML
     public void handleRadioButtonAction(ActionEvent event) {
 

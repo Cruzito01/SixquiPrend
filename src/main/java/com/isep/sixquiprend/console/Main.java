@@ -14,7 +14,7 @@ public class Main {
         sixquiprend.Startofgame();
         List<Player>players=sixquiprend.getPlayers();
         for (Player player:players){
-        sixquiprend.PlayingcardSelection(player);
+        //sixquiprend.PlayingcardSelection(player);
         }
     }
 }
