@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="Page inscription faite">
+    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="boardpage">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Board.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Inscription.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageInscription.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +74,9 @@
       <recent name="C:\Users\sheri\Documents\GitHub\SixquiPrend\src\main\java\com\example\sixquiprend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\resources\images" />
       <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\resources\com\example\sixquiprend" />
       <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\java\com\example\sixquiprend" />
-      <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\resources\images" />
       <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\resources\images\cards" />
       <recent name="C:\Users\alex-\IdeaProjects\SixquiPrend\src\main\resources\images\other" />
     </key>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685556867221</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="boardpage">
+      <created>1685558847718</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685558847718</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +156,8 @@
     <MESSAGE value="création constructeur dans classe" />
     <MESSAGE value="création des carte" />
     <MESSAGE value="Page inscription faite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page inscription faite" />
+    <MESSAGE value="boardpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="boardpage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

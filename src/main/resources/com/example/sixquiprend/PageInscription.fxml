@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sixquiprend.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sixquiprend.HelloController">
    <children>
-      <SplitPane dividerPositions="0.40771637122002086" layoutX="466.0" layoutY="68.0" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.3380281690140845" layoutX="466.0" layoutY="68.0" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -19,32 +22,39 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1078.0" prefWidth="1276.0">
                <children>
-                  <Label layoutX="196.0" layoutY="27.0" text="Add a New Player">
+                  <ImageView fitHeight="807.0" fitWidth="870.0" layoutX="-7.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Inscription.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="nameInput" layoutX="274.0" layoutY="185.0" prefHeight="32.0" prefWidth="296.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
                      <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="68.0" layoutY="116.0" prefHeight="32.0" prefWidth="60.0" text="NAME">
+                        <Font name="Sitka Small" size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="ButtonAddPlayer" layoutX="274.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleAddPlayerButton" prefHeight="25.0" prefWidth="83.0" text="Add">
                      <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="nameInput" layoutX="173.0" layoutY="120.0" prefHeight="25.0" prefWidth="240.0" />
-                  <Button fx:id="ButtonAddPlayer" layoutX="216.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleAddPlayerButton" text="Add" />
-                  <Button fx:id="buttonGoToBoard" layoutX="305.0" layoutY="465.0" onAction="#handleGoToBoardButton" mnemonicParsing="false" text="Let's Play">
+                        <Font name="Sitka Small" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="buttonGoToBoard" layoutX="605.0" layoutY="662.0" mnemonicParsing="false" onAction="#handleGoToBoardButton" prefHeight="53.0" prefWidth="117.0" text="Let's Play">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="BackButton" layoutX="90.0" layoutY="465.0" mnemonicParsing="false" onAction="#onPlayButtonClick" prefHeight="39.0" prefWidth="106.0" text="Back">
+                  <Button fx:id="BackButton" layoutX="113.0" layoutY="662.0" mnemonicParsing="false" onAction="#onPlayButtonClick" prefHeight="53.0" prefWidth="117.0" text="Back">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonRemoveLastPlayer" layoutX="295.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleRemoveLastPlayerButton" text="Remove" />
-                  <Label fx:id="errorLabel" layoutX="25.0" layoutY="249.0" prefHeight="27.0" prefWidth="420.0" text="You must be between 1 and 10 players to be able to start à game" textFill="#ff0606" visible="false">
+                  <Button fx:id="buttonRemoveLastPlayer" layoutX="487.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleRemoveLastPlayerButton" prefWidth="83.0" text="Remove">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Label fx:id="errorLabel" layoutX="142.0" layoutY="323.0" prefHeight="53.0" prefWidth="560.0" text="You MUST be between 1 and 10 players to be able to start à game" textFill="#ff0606" visible="false">
+                     <font>
+                        <Font name="Sitka Small" size="17.0" />
                      </font>
                   </Label>
                </children>
