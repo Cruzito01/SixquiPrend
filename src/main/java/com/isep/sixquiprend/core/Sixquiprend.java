@@ -13,7 +13,7 @@ public class Sixquiprend {
 
     public Sixquiprend(){
         this.players= new ArrayList<>();
-        this.board= new Board();
+        this.board= new Board ();
         this.cardinhand= new ArrayList<>();
     }
 
@@ -36,7 +36,6 @@ public class Sixquiprend {
         board.clearBoard();
 
         // pioche
-
         List<Card> drawcard=Card.generatecards();
         //melange pioche pour distribution
         Collections.shuffle(drawcard);
@@ -51,16 +50,16 @@ public class Sixquiprend {
         }
         // affichage de la main
         for(Player player:players){
-            System.out.println(player.getName()+"'s"+player.getHand().getCardsinhand());
+            System.out.println(player.getName()+"'s"+player.getHand().getCardsinhandAsString());
         }
 
         for(int i=0;i<4;i++){
             Card card = drawcard.remove(0);
             board.getCardsonboard().add(card);
         }
-        System.out.println("card on board:");
+        System.out.println("card on board:\n");
         for (Card card: board.getCardsonboard()){
-            System.out.println(card);
+            System.out.println("card number "+card.getCardsnumber()+" ( "+ card.getHeadofbeef()+" head of beef )\n");
         }
 
     }

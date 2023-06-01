@@ -10,8 +10,12 @@ public class Hand {
         this.cardsinhand=new ArrayList<>();
     }
 
-    public List<Card> getCardsinhand() {
-        return cardsinhand;
+    public List<String> getCardsinhandAsString() {
+        List<String> cards=new ArrayList<>();
+        for (Card card:cardsinhand){
+            cards.add("card number "+ card.getCardsnumber()+" ( "+card.getHeadofbeef()+" head of beef )");
+        }
+        return cards;
     }
 
     public void setCardsinhand(List<Card> cardsinhand) {
