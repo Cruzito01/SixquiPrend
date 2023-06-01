@@ -65,6 +65,7 @@ public class Sixquiprend {
 
     }
     // choix de la carte qu'ils vont jouer
+    /*
     public void PlayingcardSelection(Player player){
         System.out.println(player.getName()+"choose the card you want to play this round");
         System.out.println("your hand consists of : "+ player.getHand().getCardsinhandAsString());
@@ -78,5 +79,5 @@ public class Sixquiprend {
 
     }
 
-
+*/
 }
