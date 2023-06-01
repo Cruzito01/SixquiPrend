@@ -48,11 +48,12 @@ public class Sixquiprend {
 
 
         }
-        // affichage de la main
+        // affichage de la main du joueur
         for(Player player:players){
             System.out.println(player.getName()+"'s"+player.getHand().getCardsinhandAsString());
         }
 
+        //distribution des 4carte sur le plateau
         for(int i=0;i<4;i++){
             Card card = drawcard.remove(0);
             board.getCardsonboard().add(card);
@@ -60,6 +61,19 @@ public class Sixquiprend {
         System.out.println("card on board:\n");
         for (Card card: board.getCardsonboard()){
             System.out.println("card number "+card.getCardsnumber()+" ( "+ card.getHeadofbeef()+" head of beef )\n");
+        }
+
+    }
+    // choix de la carte qu'ils vont jouer
+    public void PlayingcardSelection(Player player){
+        System.out.println(player.getName()+"choose the card you want to play this round");
+        System.out.println("your hand consists of : "+ player.getHand().getCardsinhandAsString());
+
+        Scanner scanner=new Scanner(System.in);
+        int cardnumber;
+        do {
+            System.out.println("Enter your choice");
+
         }
 
     }
