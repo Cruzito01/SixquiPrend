@@ -17,6 +17,21 @@ public class Hand {
         }
         return cards;
     }
+    public Card getNumbercardinhand(int cardnumber){
+        for (Card card:cardsinhand){
+            if (card.getCardsnumber()==cardnumber){
+                return card;
+            }
+        }return null;
+    }
+
+    public boolean hascardinhishand(int cardnumber){
+        for (Card card:cardsinhand){
+            if(card.getCardsnumber()==cardnumber){
+                return true;
+            }
+        }return false;
+    }
 
     public void setCardsinhand(List<Card> cardsinhand) {
         this.cardsinhand = cardsinhand;

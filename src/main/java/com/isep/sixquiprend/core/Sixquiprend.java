@@ -64,18 +64,31 @@ public class Sixquiprend {
         }
 
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
     // choix de la carte qu'ils vont jouer
     /*
     public void PlayingcardSelection(Player player){
-        System.out.println(player.getName()+"choose the card you want to play this round");
+        System.out.println(player.getName()+" choose the card you want to play this round");
         System.out.println("your hand consists of : "+ player.getHand().getCardsinhandAsString());
 
         Scanner scanner=new Scanner(System.in);
         int cardnumber;
+        boolean validcard;
         do {
             System.out.println("Enter your choice");
+            cardnumber= scanner.nextInt();
+            validcard=player.getHand().hascardinhishand(cardnumber);
+            if (!validcard){
+                System.out.println("your selection is not in your hand! Please choose again");
+            }
+        }while (!validcard);
+        Card selectedcard=player.getHand().getNumbercardinhand(cardnumber);
+        System.out.println("you have selected card number: "+selectedcard.getCardsnumber()+" with "+selectedcard.getHeadofbeef()+" head of beef");
 
-        }
 
     }
 
