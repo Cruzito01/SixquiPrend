@@ -1,6 +1,5 @@
 package com.example.sixquiprend;
 
-import com.isep.sixquiprend.core.Card;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,14 +7,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import java.io.IOException;
-import java.util.*;
 
-import static com.isep.sixquiprend.core.Card.generatecards;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class HelloController {
     @FXML
@@ -83,6 +81,8 @@ public class HelloController {
     private Button ContinueButton;
     @FXML
     private Label Namelabel;
+
+
     @FXML
     public void handleGoToBoardButton(ActionEvent event) throws IOException {
         //ObservableList<String> items = playersListView.getItems();
@@ -106,9 +106,99 @@ public class HelloController {
 
     @FXML
     public void handleStartButton(ActionEvent event) throws IOException {
+        ArrayList<String> Allplayers = new ArrayList<>();
+        Allplayers.add(0, "Alexandre");
+        Allplayers.add(1, "Sherine");
+        Allplayers.add(2, "Martin");
+        Namelabel.setText(Allplayers.get(0));
         StartButton.setDisable(true);
         StartButton.setOpacity(0);
         ContinueButton.setDisable(false);
+        Image hideSideImage = new Image(getClass().getResourceAsStream("backside.png"));
+        handCard1.setImage(hideSideImage);
+        handCard2.setImage(hideSideImage);
+        handCard3.setImage(hideSideImage);
+        handCard4.setImage(hideSideImage);
+        handCard5.setImage(hideSideImage);
+        handCard6.setImage(hideSideImage);
+        handCard7.setImage(hideSideImage);
+        handCard8.setImage(hideSideImage);
+        handCard9.setImage(hideSideImage);
+        handCard10.setImage(hideSideImage);
+
+
+
+        ArrayList<String> player0 = new ArrayList<>();
+        ArrayList<String> player1 = new ArrayList<>();
+        ArrayList<String> player2 = new ArrayList<>();
+
+        player0.add(0,"6.png");
+        player0.add(1,"2.png");
+        player0.add(2,"67.png");
+        player0.add(3,"62.png");
+        player0.add(4,"38.png");
+        player0.add(5,"77.png");
+        player0.add(6,"34.png");
+        player0.add(7,"57.png");
+        player0.add(8,"83.png");
+        player0.add(9,"92.png");
+
+        player1.add(0,"61.png");
+        player1.add(1,"3.png");
+        player1.add(2,"4.png");
+        player1.add(3,"58.png");
+        player1.add(4,"30.png");
+        player1.add(5,"90.png");
+        player1.add(6,"98.png");
+        player1.add(7,"51.png");
+        player1.add(8,"46.png");
+        player1.add(9,"45.png");
+
+        player2.add(0,"1.png");
+        player2.add(1,"8.png");
+        player2.add(2,"62.png");
+        player2.add(3,"22.png");
+        player2.add(4,"45.png");
+        player2.add(5,"11.png");
+        player2.add(6,"34.png");
+        player2.add(7,"94.png");
+        player2.add(8,"82.png");
+        player2.add(9,"101.png");
+
+
+        l1c1.setImage(new Image((getClass().getResourceAsStream("27.png"))));
+        l2c1.setImage(new Image((getClass().getResourceAsStream("61.png"))));
+        l3c1.setImage(new Image((getClass().getResourceAsStream("25.png"))));
+        l4c1.setImage(new Image((getClass().getResourceAsStream("12.png"))));
+
+
+        /*
+        // Déclaration de la liste principale (matrice)
+        List<List<Integer>> matrix = new ArrayList<>();
+        // Ajouter les listes à la matrice
+        for (int i = 0; i < 4; i++) {
+            List<Integer> sublist = new ArrayList<>();
+            for (int j = 0; j < 5; j++) {
+                // Ajouter un élément à la sous-liste
+                sublist.add(0); // Remplacez 0 par la valeur souhaitée
+            }
+            // Ajouter la sous-liste à la matrice
+            matrix.add(sublist);
+        }
+        // Accéder aux éléments de la matrice
+        //int element = matrix.get(2).get(3); // Accéder à l'élément de la troisième liste à l'index 3
+        // Modifier un élément de la matrice
+        matrix.get(1).set(2, 10); // Modifier l'élément de la deuxième liste à l'index 2
+        // Parcourir la matrice
+        for (List<Integer> sublist : matrix) {
+            for (int element : sublist) {
+                // Faire quelque chose avec chaque élément
+                System.out.print(element + " ");
+            }
+            System.out.println(); // Saut de ligne après chaque sous-liste
+        }
+
+         */
     }
 
     private ImageView getHandCardImageView(int index){
@@ -162,14 +252,30 @@ public class HelloController {
     private ImageView handCard10;
 
     @FXML
+    private ImageView l1c1;
+
+    @FXML
+    private ImageView l2c1;
+
+    @FXML
+    private ImageView l3c1;
+
+    @FXML
+    private ImageView l4c1;
+
+
+    int i = 1;
+    @FXML
     public void handleContinueButton(ActionEvent event) throws IOException {
         ArrayList<String> Allplayers = new ArrayList<>();
         Allplayers.add(0, "Alexandre");
         Allplayers.add(1, "Sherine");
         Allplayers.add(2, "Martin");
-        Namelabel.setText(Allplayers.get(0));
-
-
+        Namelabel.setText(Allplayers.get(i));
+        i++;
+        if(i==3){
+            i=0;
+        }
     }
 
 
@@ -199,13 +305,19 @@ public class HelloController {
             handCard8.setImage(hideSideImage);
             handCard9.setImage(hideSideImage);
             handCard10.setImage(hideSideImage);
-        } else {
-            // Afficher les images correspondantes aux cartes individuelles
-            ArrayList<String> Allplayers = new ArrayList<>();
-            Allplayers.add(0, "Alexandre");
-            Allplayers.add(1, "Sherine");
-            Allplayers.add(2, "Martin");
-
+        }else {
+            handCard1.setImage(new Image(getClass().getResourceAsStream("3.png")));
+            handCard2.setImage(new Image(getClass().getResourceAsStream("19.png")));
+            handCard3.setImage(new Image(getClass().getResourceAsStream("29.png")));
+            handCard4.setImage(new Image(getClass().getResourceAsStream("48.png")));
+            handCard5.setImage(new Image(getClass().getResourceAsStream("52.png")));
+            handCard6.setImage(new Image(getClass().getResourceAsStream("71.png")));
+            handCard7.setImage(new Image(getClass().getResourceAsStream("80.png")));
+            handCard8.setImage(new Image(getClass().getResourceAsStream("89.png")));
+            handCard9.setImage(new Image(getClass().getResourceAsStream("91.png")));
+            handCard10.setImage(new Image(getClass().getResourceAsStream("101.png")));
+        }
+            /*
             List<Card> generateCards = generatecards();
             Collections.shuffle(generateCards);
 
@@ -215,7 +327,6 @@ public class HelloController {
 
             for (int playerIndex = 0; playerIndex < numplayer; playerIndex++) {
                 String playerName = Allplayers.get(playerIndex);
-                Namelabel.setText(playerName);
 
                 for (int i = 0; i < cardsperplayer; i++) {
                     if (cardIndex >= generateCards.size()) {
@@ -231,10 +342,12 @@ public class HelloController {
                     handCard.setVisible(true);
 
                     cardIndex++;
-                }
-            }
-        }
+
+             */
     }
 }
+
+
+
 
 

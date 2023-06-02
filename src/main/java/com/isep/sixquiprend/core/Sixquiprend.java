@@ -11,6 +11,8 @@ public class Sixquiprend {
     private List<Card> cardinhand;
     private List<Player> players;
 
+    private List<Card> drawcard;
+
     public Sixquiprend(){
         this.players= new ArrayList<>();
         this.board= new Board ();
@@ -36,7 +38,7 @@ public class Sixquiprend {
         board.clearBoard();
 
         // pioche
-        List<Card> drawcard=Card.generatecards();
+        drawcard=Card.generatecards();
         //melange pioche pour distribution
         Collections.shuffle(drawcard);
         // distribution
