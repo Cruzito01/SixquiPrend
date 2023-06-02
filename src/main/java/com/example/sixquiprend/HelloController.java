@@ -1,5 +1,6 @@
 package com.example.sixquiprend;
 
+import com.isep.sixquiprend.core.Card;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,14 +13,18 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
+
+import static com.isep.sixquiprend.core.Card.generatecards;
 
 public class HelloController {
     @FXML
     private Button btnPlay;
     @FXML
     private Button BackButton;
+
+
+
     @FXML
     private void onPlayButtonClick(ActionEvent event) throws IOException {
         Stage stage;
@@ -106,8 +111,33 @@ public class HelloController {
         ContinueButton.setDisable(false);
     }
 
+    private ImageView getHandCardImageView(int index){
+        switch (index){
+            case 0:
+                return handCard1;
+            case 1:
+                return handCard2;
+            case 2:
+                return handCard3;
+            case 3:
+                return handCard4;
+            case 4:
+                return handCard5;
+            case 5:
+                return handCard6;
+            case 6:
+                return handCard7;
+            case 7:
+                return handCard8;
+            case 8:
+                return handCard9;
+            case 9:
+                return handCard10;
+            default:
+                return null;
 
-
+        }
+    }
     //affichage des cartes
 
     @FXML
@@ -138,14 +168,73 @@ public class HelloController {
         Allplayers.add(1, "Sherine");
         Allplayers.add(2, "Martin");
         Namelabel.setText(Allplayers.get(0));
-    }
 
+
+    }
 
 
 
     @FXML
+    private  RadioButton hideCardsRadioButton;
+
+    @FXML
     public void handleRadioButtonAction(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PageBoard.fxml"));
+        try {
+            Parent root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+        if (hideCardsRadioButton.isSelected()) {
+            // Afficher l'image hideside.png pour toutes les cartes
+            Image hideSideImage = new Image(getClass().getResourceAsStream("backside.png"));
+            handCard1.setImage(hideSideImage);
+            handCard2.setImage(hideSideImage);
+            handCard3.setImage(hideSideImage);
+            handCard4.setImage(hideSideImage);
+            handCard5.setImage(hideSideImage);
+            handCard6.setImage(hideSideImage);
+            handCard7.setImage(hideSideImage);
+            handCard8.setImage(hideSideImage);
+            handCard9.setImage(hideSideImage);
+            handCard10.setImage(hideSideImage);
+        } else {
+            // Afficher les images correspondantes aux cartes individuelles
+            ArrayList<String> Allplayers = new ArrayList<>();
+            Allplayers.add(0, "Alexandre");
+            Allplayers.add(1, "Sherine");
+            Allplayers.add(2, "Martin");
+
+            List<Card> generateCards = generatecards();
+            Collections.shuffle(generateCards);
+
+            int numplayer = Allplayers.size();
+            int cardsperplayer = 10;
+            int cardIndex = 0;
+
+            for (int playerIndex = 0; playerIndex < numplayer; playerIndex++) {
+                String playerName = Allplayers.get(playerIndex);
+                Namelabel.setText(playerName);
+
+                for (int i = 0; i < cardsperplayer; i++) {
+                    if (cardIndex >= generateCards.size()) {
+                        break;
+                    }
+                    Card card = generateCards.get(cardIndex);
+                    int cardNumber = card.getCardsnumber();
+                    String imagePath = cardNumber + ".png";
+                    Image cardImage = new Image(getClass().getResourceAsStream(imagePath));
+                    int imageViewIndex = playerIndex * cardsperplayer + i;
+                    ImageView handCard = getHandCardImageView(imageViewIndex);
+                    handCard.setImage(cardImage);
+                    handCard.setVisible(true);
+
+                    cardIndex++;
+                }
+            }
+        }
     }
-
 }
+
+
