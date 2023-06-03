@@ -11,8 +11,6 @@ public class Sixquiprend {
     private List<Card> cardinhand;
     private List<Player> players;
 
-    private List<Card> drawcard;
-
     public Sixquiprend(){
         this.players= new ArrayList<>();
         this.board= new Board ();
@@ -38,7 +36,7 @@ public class Sixquiprend {
         board.clearBoard();
 
         // pioche
-        drawcard=Card.generatecards();
+        List<Card> drawcard=Card.generatecards();
         //melange pioche pour distribution
         Collections.shuffle(drawcard);
         // distribution
@@ -72,7 +70,7 @@ public class Sixquiprend {
     }
 
     // choix de la carte qu'ils vont jouer
-    /*
+
     public void PlayingcardSelection(Player player){
         System.out.println(player.getName()+" choose the card you want to play this round");
         System.out.println("your hand consists of : "+ player.getHand().getCardsinhandAsString());
@@ -93,6 +91,38 @@ public class Sixquiprend {
 
 
     }
+    public void placeofcardinboard(Player player, Card selectedCard) {
+        List<Card> cardsOnBoard = board.getCardsonboard();
 
-*/
+        // Trouver la carte sur le plateau avec la plus petite différence
+        Card nearestCard = findNearestCard(cardsOnBoard, selectedCard);
+
+        // Insérer la carte sélectionnée près de la carte la plus proche
+        int insertionIndex = cardsOnBoard.indexOf(nearestCard) + 1;
+        cardsOnBoard.add(insertionIndex, selectedCard);
+
+        // Afficher les cartes sur le plateau après l'insertion
+        System.out.println("Cards on board after placing the selected card:");
+        for (Card card : cardsOnBoard) {
+            System.out.println("Card number " + card.getCardsnumber() + " (" + card.getHeadofbeef() + " head of beef)");
+        }
+
+        // Retirer la carte de la main du joueur
+        player.getHand().removeCard(selectedCard);
+    }
+
+    private Card findNearestCard(List<Card> cardsOnBoard, Card selectedCard) {
+        // Trouver la carte sur le plateau avec la plus petite différence
+        Card nearestCard = cardsOnBoard.get(0);
+        for (Card card : cardsOnBoard) {
+            if (Math.abs(card.getCardsnumber() - selectedCard.getCardsnumber()) < Math.abs(nearestCard.getCardsnumber() - selectedCard.getCardsnumber())) {
+                nearestCard = card;
+            }
+        }
+        return nearestCard;
+    }
+
+
+
+
 }

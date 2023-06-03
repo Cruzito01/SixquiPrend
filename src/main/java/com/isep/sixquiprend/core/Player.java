@@ -4,10 +4,14 @@ public class Player {
 
     private String name;
     private Hand hand;
+    private Card selectedCard;
+    ;
+
 
     public Player(String name){
         this.name=name;
         this.hand= new Hand();
+        this.selectedCard =getSelectedCard() ;
     }
 
     public Hand getHand() {
@@ -27,4 +31,10 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public Card getSelectedCard() {
+        return selectedCard;
+
+    }
+
 }
