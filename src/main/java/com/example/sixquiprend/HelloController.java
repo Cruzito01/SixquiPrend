@@ -1,6 +1,5 @@
 package com.example.sixquiprend;
 
-import com.isep.sixquiprend.core.Card;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,9 +14,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 
-import static com.isep.sixquiprend.core.Card.generatecards;
-
 public class HelloController {
+
+
     @FXML
     private Button btnPlay;
     @FXML
@@ -54,7 +53,7 @@ public class HelloController {
     public void handleAddPlayerButton(ActionEvent event) {
         String playerName = nameInput.getText();
         if (!playerName.isEmpty()) {
-            ObservableList<String> items = playersListView.getItems();
+            ObservableList<String> items = getPlayersListView().getItems();
             items.add(playerName);
             players.add(nameInput.getText());
             nameInput.clear();
@@ -64,7 +63,7 @@ public class HelloController {
 
     @FXML
     public void handleRemoveLastPlayerButton(ActionEvent event) {
-        ObservableList<String> items = playersListView.getItems();
+        ObservableList<String> items = getPlayersListView().getItems();
         if (!items.isEmpty()) {
             int lastIndex = items.size() - 1;
             players.remove(lastIndex);
@@ -84,12 +83,14 @@ public class HelloController {
     @FXML
     private Label Namelabel;
     @FXML
+    private Button NextPlayer;
+    @FXML
     public void handleGoToBoardButton(ActionEvent event) throws IOException {
         //ObservableList<String> items = playersListView.getItems();
         //int numPlayers = items.size();
         int numPlayers = players.size();
-
         if (numPlayers >= 1 && numPlayers <= 10) {
+            Players.playersList();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PageBoard.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -104,11 +105,20 @@ public class HelloController {
         }
     }
 
+    private int p;
+    //private final ArrayList<String> Allplayers = new ArrayList<String>();
+
     @FXML
-    public void handleStartButton(ActionEvent event) throws IOException {
+    public void handleStartButton(ActionEvent event) {
         StartButton.setDisable(true);
         StartButton.setOpacity(0);
         ContinueButton.setDisable(false);
+        ContinueButton.setOpacity(1);
+        /*Allplayers.add(0, "Alexandre");
+        Allplayers.add(1, "Sherine");
+        Allplayers.add(2, "Martin");
+         */
+        p=0;
     }
 
     private ImageView getHandCardImageView(int index){
@@ -162,14 +172,24 @@ public class HelloController {
     private ImageView handCard10;
 
     @FXML
-    public void handleContinueButton(ActionEvent event) throws IOException {
-        ArrayList<String> Allplayers = new ArrayList<>();
-        Allplayers.add(0, "Alexandre");
-        Allplayers.add(1, "Sherine");
-        Allplayers.add(2, "Martin");
-        Namelabel.setText(Allplayers.get(0));
+    public void handleContinueButton(ActionEvent event) {
+        ContinueButton.setDisable(true);
+        ContinueButton.setOpacity(0);
+        NextPlayer.setDisable(false);
+        NextPlayer.setOpacity(1);
+    }
 
-
+    @FXML
+    public void handlenextPlayerButton(ActionEvent event) {
+        Namelabel.setText(Players.players.get(p));
+        p++;
+        if(p==3){
+            p=0;
+        }
+        NextPlayer.setDisable(true);
+        NextPlayer.setOpacity(0);
+        ContinueButton.setDisable(false);
+        ContinueButton.setOpacity(1);
     }
 
 
@@ -203,44 +223,15 @@ public class HelloController {
             handCard8.setImage(hideSideImage);
             handCard9.setImage(hideSideImage);
             handCard10.setImage(hideSideImage);
-        } else {
-            // Afficher les images correspondantes aux cartes individuelles
-            ArrayList<String> Allplayers = new ArrayList<>();
-            Allplayers.add(0, "Alexandre");
-            Allplayers.add(1, "Sherine");
-            Allplayers.add(2, "Martin");
-
-            List<Card> generateCards = generatecards();
-            Collections.shuffle(generateCards);
-
-            int numplayer = Allplayers.size();
-            int cardsperplayer = 10;
-            int cardIndex = 0;
-
-            for (int playerIndex = 0; playerIndex < numplayer; playerIndex++) {
-                String playerName = Allplayers.get(playerIndex);
-                Namelabel.setText(playerName);
-
-                for (int i = 0; i < cardsperplayer; i++) {
-                    if (cardIndex >= generateCards.size()) {
-                        break;
-                    }
-                    Card card = generateCards.get(cardIndex);
-                    int cardNumber = card.getCardsnumber();
-                    String imagePath = cardNumber + ".png";
-                    Image cardImage = new Image(Objects.requireNonNull(
-                            getClass().getResource(String.format("/images/cards/%s",imagePath))
-                    ).toExternalForm());
-                            // getClass().getResourceAsStream(imagePath));
-                    int imageViewIndex = playerIndex * cardsperplayer + i;
-                    ImageView handCard = getHandCardImageView(imageViewIndex);
-                     handCard.setImage(cardImage);
-                    handCard.setVisible(true);
-
-                    cardIndex++;
-                }
-            }
         }
+    }
+
+    public static ListView<String> getPlayersListView() {
+        return playersListView;
+    }
+
+    public void setPlayersListView(ListView<String> playersListView) {
+        this.playersListView = playersListView;
     }
 }
 

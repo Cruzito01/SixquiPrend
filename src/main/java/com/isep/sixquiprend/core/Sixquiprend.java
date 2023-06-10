@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import com.example.sixquiprend.HelloController;
 
 public class Sixquiprend {
 
     private Board board;
     private List<Card> cardinhand;
     private List<Player> players;
+
 
     public Sixquiprend(){
         this.players= new ArrayList<>();
