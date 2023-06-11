@@ -1,22 +1,23 @@
 package com.isep.sixquiprend.core;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-import com.example.sixquiprend.HelloController;
+import java.util.*;
 
 public class Sixquiprend {
 
     private Board board;
     private List<Card> cardinhand;
     private List<Player> players;
+    private List<String> playerNames;
 
 
     public Sixquiprend(){
         this.players= new ArrayList<>();
         this.board= new Board ();
         this.cardinhand= new ArrayList<>();
+        this.playerNames = new ArrayList<>();
+    }
+    public void setPlayerNames(List<String> playerNames) {
+        this.playerNames = playerNames;
     }
 
     public void Startofgame(){
@@ -28,10 +29,9 @@ public class Sixquiprend {
             System.out.println("invalid player numbers");
             return;
         }
-        for (int i=0;i<numPlayers;i++){
-            System.out.println("enter the name of player"+(i+1) );
-            String playername=scanner.next();
-            Player player=new Player(playername);
+        for (int i = 0; i < numPlayers; i++) {
+            String playerName = playerNames.get(i);
+            Player player = new Player(playerName);
             players.add(player);
         }
         System.out.println("the game can begin!!!");
@@ -65,6 +65,21 @@ public class Sixquiprend {
             System.out.println("card number "+card.getCardsnumber()+" ( "+ card.getHeadofbeef()+" head of beef )\n");
         }
 
+        for (Player player:players){
+            PlayingcardSelection(player);
+        }
+
+        List<Card> selectedCard=new ArrayList<>();
+        for (Player player:players){
+            selectedCard.add(player.getSelectedCard());
+        }
+
+        Collections.sort(selectedCard, Comparator.comparingInt(Card::getCardsnumber));
+        System.out.println("all cards selected by players");
+        for (Card card:selectedCard){
+            System.out.println("card number "+card.getCardsnumber()+" ("+card.getHeadofbeef()+" head of beef)");
+        }
+
     }
 
     public List<Player> getPlayers() {
@@ -80,6 +95,7 @@ public class Sixquiprend {
         Scanner scanner=new Scanner(System.in);
         int cardnumber;
         boolean validcard;
+        Card selectioncard=null;
         do {
             System.out.println("Enter your choice");
             cardnumber= scanner.nextInt();
@@ -90,7 +106,8 @@ public class Sixquiprend {
         }while (!validcard);
         Card selectedcard=player.getHand().getNumbercardinhand(cardnumber);
         System.out.println("you have selected card number: "+selectedcard.getCardsnumber()+" with "+selectedcard.getHeadofbeef()+" head of beef");
-
+        player.setSelectedCard(selectedcard);
+        placeofcardinboard(player, selectedcard);
 
     }
     public void placeofcardinboard(Player player, Card selectedCard) {
