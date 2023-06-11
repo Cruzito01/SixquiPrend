@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="ai">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Players.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2023_11_46_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2023_11_46__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2023_13_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_06_2023_13_25__Changes_.xml" beforeDir="false" />
+    <list default="true" id="757720f3-0c70-4e48-92a7-a580a0148911" name="Changes" comment="JE N'ARRIVE PAS AVEC CES LISTESSSSSSSSSS">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/PlayersClone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GamePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/view/GameView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isep/sixquiprend/core/Sixquiprend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sixquiprend/PageBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sixquiprend/Players.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +122,8 @@
       <workItem from="1685362857019" duration="6377000" />
       <workItem from="1685387747228" duration="1971000" />
       <workItem from="1685474795969" duration="4969000" />
-      <workItem from="1686401492377" duration="665000" />
+      <workItem from="1686401492377" duration="1556000" />
+      <workItem from="1686485666008" duration="4317000" />
     </task>
     <task id="LOCAL-00001" summary="architecture des classe">
       <created>1684953353503</created>
@@ -201,11 +195,29 @@
       <option name="project" value="LOCAL" />
       <updated>1685655158105</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="JE N'ARRIVE PAS AVEC CES LISTESSSSSSSSSS">
+      <created>1686402189591</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686402189591</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="architecture des classe" />
@@ -214,7 +226,8 @@
     <MESSAGE value="Page inscription faite" />
     <MESSAGE value="boardpage" />
     <MESSAGE value="ai" />
-    <option name="LAST_COMMIT_MESSAGE" value="ai" />
+    <MESSAGE value="JE N'ARRIVE PAS AVEC CES LISTESSSSSSSSSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="JE N'ARRIVE PAS AVEC CES LISTESSSSSSSSSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

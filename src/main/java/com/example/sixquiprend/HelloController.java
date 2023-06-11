@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -23,18 +24,16 @@ public class HelloController {
     private Button BackButton;
 
 
-
     @FXML
     private void onPlayButtonClick(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
 
-        if(event.getSource()==btnPlay){
-            stage=(Stage) btnPlay.getScene().getWindow();
+        if (event.getSource() == btnPlay) {
+            stage = (Stage) btnPlay.getScene().getWindow();
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PageInscription.fxml")));
-        }
-        else{
-            stage=(Stage) BackButton.getScene().getWindow();
+        } else {
+            stage = (Stage) BackButton.getScene().getWindow();
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Page1.fxml")));
         }
         Scene scene = new Scene(root);
@@ -45,7 +44,9 @@ public class HelloController {
     @FXML
     private ListView<String> playersListView;
     @FXML
-    private ArrayList<String> players= new ArrayList<>();
+    private ArrayList<String> players = new ArrayList<>();
+
+
 
     @FXML
     private TextField nameInput;
@@ -53,7 +54,7 @@ public class HelloController {
     public void handleAddPlayerButton(ActionEvent event) {
         String playerName = nameInput.getText();
         if (!playerName.isEmpty()) {
-            ObservableList<String> items = getPlayersListView().getItems();
+            ObservableList<String> items = playersListView.getItems();
             items.add(playerName);
             players.add(nameInput.getText());
             nameInput.clear();
@@ -63,7 +64,7 @@ public class HelloController {
 
     @FXML
     public void handleRemoveLastPlayerButton(ActionEvent event) {
-        ObservableList<String> items = getPlayersListView().getItems();
+        ObservableList<String> items = playersListView.getItems();
         if (!items.isEmpty()) {
             int lastIndex = items.size() - 1;
             players.remove(lastIndex);
@@ -84,70 +85,58 @@ public class HelloController {
     private Label Namelabel;
     @FXML
     private Button NextPlayer;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     @FXML
     public void handleGoToBoardButton(ActionEvent event) throws IOException {
         //ObservableList<String> items = playersListView.getItems();
         //int numPlayers = items.size();
         int numPlayers = players.size();
         if (numPlayers >= 1 && numPlayers <= 10) {
-            Players.playersList();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PageBoard.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
+            PlayersClone playersClone = new PlayersClone();
+            playersClone.allPlayers.addAll(players);
+            root = FXMLLoader.load(getClass().getResource("PageBoard.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
             stage.show();
-            // Fermer la fenêtre actuelle si nécessaire
-            Stage currentStage = (Stage) buttonGoToBoard.getScene().getWindow();
-            currentStage.close();
         } else {
             errorLabel.setVisible(true);
             // Afficher un message d'erreur ou une notification indiquant les conditions requises
         }
     }
 
+    List<String> nextPlayers = new ArrayList<>();
     private int p;
-    //private final ArrayList<String> Allplayers = new ArrayList<String>();
 
     @FXML
     public void handleStartButton(ActionEvent event) {
+        nextPlayers.addAll(PlayersClone.allPlayers);
         StartButton.setDisable(true);
         StartButton.setOpacity(0);
         ContinueButton.setDisable(false);
         ContinueButton.setOpacity(1);
-        /*Allplayers.add(0, "Alexandre");
-        Allplayers.add(1, "Sherine");
-        Allplayers.add(2, "Martin");
-         */
-        p=0;
+
+
+        Image hideSideImage = new Image(Objects.requireNonNull(
+                getClass().getResource("/images/cards/backside.png")
+        ).toExternalForm());
+
+        handCard1.setImage(hideSideImage);
+        handCard2.setImage(hideSideImage);
+        handCard3.setImage(hideSideImage);
+        handCard4.setImage(hideSideImage);
+        handCard5.setImage(hideSideImage);
+        handCard6.setImage(hideSideImage);
+        handCard7.setImage(hideSideImage);
+        handCard8.setImage(hideSideImage);
+        handCard9.setImage(hideSideImage);
+        handCard10.setImage(hideSideImage);
+        p = 0;
     }
 
-    private ImageView getHandCardImageView(int index){
-        switch (index){
-            case 0:
-                return handCard1;
-            case 1:
-                return handCard2;
-            case 2:
-                return handCard3;
-            case 3:
-                return handCard4;
-            case 4:
-                return handCard5;
-            case 5:
-                return handCard6;
-            case 6:
-                return handCard7;
-            case 7:
-                return handCard8;
-            case 8:
-                return handCard9;
-            case 9:
-                return handCard10;
-            default:
-                return null;
-
-        }
-    }
     //affichage des cartes
 
     @FXML
@@ -181,10 +170,10 @@ public class HelloController {
 
     @FXML
     public void handlenextPlayerButton(ActionEvent event) {
-        Namelabel.setText(Players.players.get(p));
+        Namelabel.setText(nextPlayers.get(p));
         p++;
-        if(p==3){
-            p=0;
+        if (p == 3) {
+            p = 0;
         }
         NextPlayer.setDisable(true);
         NextPlayer.setOpacity(0);
@@ -193,9 +182,8 @@ public class HelloController {
     }
 
 
-
     @FXML
-    private  RadioButton hideCardsRadioButton;
+    private RadioButton hideCardsRadioButton;
 
     @FXML
     public void handleRadioButtonAction(ActionEvent event) {
@@ -212,7 +200,7 @@ public class HelloController {
                     getClass().getResource("/images/cards/backside.png")
             ).toExternalForm());
 
-                    // getClass().getResourceAsStream("backside.png"));
+            // getClass().getResourceAsStream("backside.png"));
             handCard1.setImage(hideSideImage);
             handCard2.setImage(hideSideImage);
             handCard3.setImage(hideSideImage);
@@ -226,13 +214,6 @@ public class HelloController {
         }
     }
 
-    public static ListView<String> getPlayersListView() {
-        return playersListView;
-    }
-
-    public void setPlayersListView(ListView<String> playersListView) {
-        this.playersListView = playersListView;
-    }
 }
 
 
